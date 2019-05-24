@@ -8,6 +8,7 @@ module.exports = () => {
         console.log('Connection is Successful');
     });
     mongoose.connection.on('error', err => {
+        //Connection is unsuccessful
         console.log('MongoDB Error: ', err);
     });
 

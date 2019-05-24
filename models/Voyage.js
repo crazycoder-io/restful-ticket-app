@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
+const Schema = mongoose.Schema;
 
 const voyageSchema = new Schema({
     trainId: String,
     departure: String,
     arrival: String,
     platform: String,
-    voyage: Boolean,
+    voyage: {type: Boolean, default: false },
     date: Date
 });
 
