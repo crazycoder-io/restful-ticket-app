@@ -11,6 +11,7 @@ import logger from 'morgan';
 import indexRouter from'./routes/index';
 import trainRouter from './routes/trains';
 import voyageRouter from './routes/voyage';
+import ticketRouter from './routes/ticket';
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/trains', trainRouter);
 app.use('/voyages', voyageRouter);
+app.use('/tickets', ticketRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

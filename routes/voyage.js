@@ -38,8 +38,8 @@ router.post('/newVoyage', (req, res) => {
         if(err) throw err;
         if(train){
             if(train.lock != true){
-                const newVoyage = new Voyage(req.body); // Define a new train with data from req.body
-                const promise = newVoyage.save(); // Save train to database
+                const newVoyage = new Voyage(req.body); // Define a new voyage with data from req.body
+                const promise = newVoyage.save(); // Save voyage to database
 
                 promise
                     .then(voyage => {
@@ -60,7 +60,7 @@ router.post('/newVoyage', (req, res) => {
                         res.json(err);
                     });
             }else{
-                res.json({message: 'The train is locked!'});
+                res.json({message: 'The train is locked for another voyage!'});
             }
         }else{
             res.json({message: 'The train was not found!', code: 1001});

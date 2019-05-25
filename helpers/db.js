@@ -5,7 +5,7 @@ module.exports = () => {
 
     mongoose.connection.on('open', () => {
         //Connection is successful
-        console.log('Connection is Successful');
+        console.log('MongoDB Connection is Successful');
     });
     mongoose.connection.on('error', err => {
         //Connection is unsuccessful
