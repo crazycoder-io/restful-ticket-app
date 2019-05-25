@@ -12,6 +12,8 @@ import indexRouter from'./routes/index';
 import trainRouter from './routes/trains';
 import voyageRouter from './routes/voyage';
 import ticketRouter from './routes/ticket';
+import passengerRouter from './routes/passenger';
+import salesRouter from './routes/sales';
 
 const app = express();
 
@@ -45,6 +47,8 @@ app.use('/', indexRouter);
 app.use('/trains', trainRouter);
 app.use('/voyages', voyageRouter);
 app.use('/tickets', ticketRouter);
+app.use('/passenger', passengerRouter);
+app.use('/sales', salesRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
