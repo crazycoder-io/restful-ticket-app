@@ -1,12 +1,20 @@
 import mongoose from 'mongoose';
-import findOrCreate from 'mongoose-find-or-create';
 const Schema = mongoose.Schema;
 
 const passengerSchema = new Schema({
-    passengerName: String,
-    passengerSurname: String,
-    contact: String
+    passengerName: {
+        type: String,
+        required: [true, '`{PATH}` field is required!']
+    },
+    passengerSurname: {
+        type: String,
+        required: [true, '`{PATH}` field is required!']
+    },
+    contact: {
+        type: String,
+        required: [true, '`{PATH}` field is required!'],
+        unique: true
+    }
 });
 
-passengerSchema.plugin(findOrCreate);
 module.exports = mongoose.model("Passengers", passengerSchema);

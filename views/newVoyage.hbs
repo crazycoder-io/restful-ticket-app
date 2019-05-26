@@ -1,0 +1,41 @@
+<h1 class='text-center'>{{title}}</h1>
+<hr>
+<div class="container mt-5">
+    <form action="/voyages/newVoyage" method="post">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="trainId" placeholder="Train ID" name='trainId'>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="departure" placeholder="Departure" name='departure'>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="arrival" placeholder="Arrival" name='arrival'>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="platform" placeholder="Platform" name='platform'>
+            </div>
+            <div class="col">
+                <input type="date" class="form-control" id="date" placeholder="Date" name='date' min="2019-01-01" max="2019-12-31">
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Definite</button>
+    </form>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div align='middle'>
+                <a href="/">
+                    <button type="button" class="btn btn-warning"> << Back to Home</button>
+                </a>
+            </div>  
+        </div>
+    </div>
+</div>

@@ -1,2 +1,2 @@
-# restful-ticket-api
-RESTful Ticket Api
+# restful-ticket-app
+RESTful Ticket App

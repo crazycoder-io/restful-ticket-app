@@ -1,0 +1,32 @@
+<h1 class='text-center'>{{title}}</h1>
+<hr>
+<div class="container mt-5">
+    <form action="/tickets/newTicket" method="post">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="voyageId" placeholder="Voyage ID" name='voyageId'>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="firstClassTicketPrice" placeholder="First Class Ticket Price" name='firstClassTicketPrice'>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="secondClassTicketPrice" placeholder="Second Class Ticket Price" name='secondClassTicketPrice'>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Definite</button>
+    </form>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div align='middle'>
+                <a href="/">
+                    <button type="button" class="btn btn-warning"> << Back to Home</button>
+                </a>
+            </div>  
+        </div>
+    </div>
+</div>

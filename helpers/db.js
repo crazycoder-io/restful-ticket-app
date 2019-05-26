@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 module.exports = () => {
     mongoose.connect(process.env.DB_STRING, {useNewUrlParser: true});
+    mongoose.set('useCreateIndex', true);
 
     mongoose.connection.on('open', () => {
         //Connection is successful
